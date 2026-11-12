@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+  background-color: #f4f6f8;
+  color: #1e293b;
+}
+
+/* 主卡片容器（對應手機與電腦自適應寬度） */
+.app {
+  width: 100%;
+  max-width: 440px;
+  background-color: #ffffff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* 上方小標題：任務 3 */
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ea580c;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 1.75rem;
+  color: #0f172a;
+}
+
+.app > p {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* 可猜範圍大字顯示：1 ~ 100 */
+.range {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+/* 輸入區塊 */
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field input:focus {
+  border-color: #ea580c;
+}
+
+/* 按鈕排列 */
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ea580c; /* 橘色主按鈕：送出答案 */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #c2410c;
+}
+
+/* 答對後按鈕停用樣式 */
+button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* 次要按鈕：重新開始 */
+button.secondary {
+  background-color: #0f2942; /* 深藍色次要按鈕 */
+}
+
+button.secondary:hover {
+  background-color: #1e3a5f;
+}
+
+/* 狀態提示訊息框（對應簡報中的淡綠色底框） */
+.message {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background-color: #e6f4ea;
+  color: #137333;
+}
+
+/* 輸入錯誤時的紅字提示（對應 script.js 中的 "message error"） */
+.message.error {
+  background-color: #fce8e6;
+  color: #c5221f;
+}
+
+/* 猜測次數統計 */
+.stats {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+  text-align: right;
+}
